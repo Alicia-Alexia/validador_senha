@@ -9,30 +9,49 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
-    <script src="assets/js/script.js" defer></script>
 </head>
 <body class="bg-slate-900 flex items-center justify-center min-h-screen p-4">
-    <div class="bg-white w-full max-w-md p-8 rounded-2xl shadow-2xl">
-        <div class="mb-6">
+    <main class="bg-white w-full max-w-md p-8 rounded-2xl shadow-2xl">
+        
+        <header class="mb-6">
             <h1 class="text-2xl font-bold text-slate-800">Segurança da Senha</h1>
-            <p class="text-slate-500 text-sm">Digite para validar.</p>
-        </div>
+            <p id="instruction-text" class="text-slate-500 text-sm">Digite sua senha para validar a força.</p>
+        </header>
 
         <div class="mb-6">
+            <label for="password-input" class="sr-only">Sua Senha</label>
+            
             <input 
                 type="password" 
                 id="password-input" 
+                aria-describedby="instruction-text"
                 class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-100 transition-colors text-slate-700"
                 placeholder="Sua senha..."
             >
         </div>
 
         <div class="space-y-2">
-            <div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+            <div 
+                class="h-2 w-full bg-slate-100 rounded-full overflow-hidden" 
+                role="progressbar" 
+                aria-valuemin="0" 
+                aria-valuemax="100" 
+                aria-valuenow="0"
+                id="progress-container"
+            >
                 <div id="strength-bar" class="h-full w-0 bg-red-500 transition-all duration-500"></div>
             </div>
-            <p id="strength-text" class="text-sm text-slate-400 text-right">Aguardando...</p>
+            
+            <p 
+                id="strength-text" 
+                class="text-sm text-slate-400 text-right" 
+                aria-live="polite"
+            >
+                Aguardando...
+            </p>
         </div>
-    </div>
+    </main>
+    
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
