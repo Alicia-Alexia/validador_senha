@@ -3,8 +3,8 @@
 > Validador de Força de Senha com If/Else
 onde foi criado um campo de senha com indicador visual de força usando estruturas condicionais.
 
-![Project Status](https://img.shields.io/badge/status-active-success)
-![License](https://img.shields.io/badge/license-MIT-blue)
+![Badge Status](https://img.shields.io/badge/Status-Concluído-green)
+![Badge Tech](https://img.shields.io/badge/Tech-HTML%20%7C%20Tailwind%20%7C%20JS-blue)
 
 ## 📸 Preview
 
